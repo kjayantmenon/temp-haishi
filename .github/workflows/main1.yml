@@ -15,6 +15,6 @@ jobs:
     steps:
       - name: checkout code
         if: ${{github.ref == 'ref/heads/master'}}
-        uses: action/checkout@v2
+        uses: actions/checkout@v2
         
         
