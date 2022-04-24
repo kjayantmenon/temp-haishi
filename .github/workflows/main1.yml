@@ -26,3 +26,16 @@ jobs:
         run: echo "Value passed by workflow_dispatch is NO to fail workflow." 
         if: github.event.inputs.failstep == 'no'  
         
+
+      - name: Step that can be failed
+        env:
+          FAIL_STEP: ${{ github.event.inputs.failstep == 'yes' }}
+          run:
+            echo "This statement runs whether step exits 0 or 1"
+            if [[ $FAIL_STEP==true ]]
+            then
+              exit 1
+            fi  
+          
+          
+          
