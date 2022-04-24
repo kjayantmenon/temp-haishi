@@ -18,3 +18,11 @@ jobs:
         uses: actions/checkout@v2
         
         
+      - name: YES was passed as workflow input
+        if: github.event.inputs.failstep == 'yes'
+        run: echo "Value passed by workflow_dispatch is YES to fail workflow." 
+
+      - name: NO was passed as workflow input
+        run: echo "Value passed by workflow_dispatch is NO to fail workflow." 
+        if: github.event.inputs.failstep == 'no'  
+        
