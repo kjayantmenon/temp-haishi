@@ -37,5 +37,6 @@ jobs:
             exit 1
           fi
           
-          
+      - name: Step in workflow
+        run: echo "Another step in the workflow"      
           
