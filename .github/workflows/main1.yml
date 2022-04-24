@@ -1,0 +1,20 @@
+name: Testing Conditions
+
+on: 
+  workflow_dispatch:
+    inputs:
+      failstep:
+        description: 'Job1 fail (Yes/No)?'
+        required: true
+        default: no
+        
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: checkout code
+        if: ${{github.ref == 'ref/heads/master'}}
+        uses: action/checkout@v2
+        
+        
