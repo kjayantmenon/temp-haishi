@@ -1,0 +1,15 @@
+{
+	"action":"created",
+	"issue":{
+		"number":123
+	},
+	"repository":{
+		"full_name":"kjayantmenon/temp-haishi"
+	},
+	"comment":{
+		"body":".take",
+		"user":{
+			"login":"kjayantmenon"
+		}
+	}
+}
