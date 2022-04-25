@@ -10,7 +10,7 @@ jobs:
     - name: checkout repo
       uses: actions/checkout@v2
     - name: Lint Ansible Playbook
-      uses: ansible/ansible-lint-action@151b9a2 
+      uses: ansible/ansible-lint-action@151b9a224f53c80fdc2c7aed08f3671d190e7a9e 
       with:
         targets: ""
   deployAnsible:
